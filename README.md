@@ -1,60 +1,130 @@
 # AVemotion: A Multimodal Transformer for Real-Time Audio-Visual Emotion Recognition
 
-AVemotion is a deep learning-based project that combines audio and visual cues to detect human emotions in real-time. Built using PyTorch and Streamlit, this model leverages MFCC features from speech and deep features from facial video using ResNet18, fused through a Transformer-based attention model. Ideal for applications in accessibility support, human-computer interaction, and affective computing.
+AVemotion is an advanced deep learning project that detects human emotions by leveraging both speech and facial expression cues. Built using PyTorch, Streamlit, and SHAP for explainability, this system fuses audio and video signals via a Transformer-based model to recognize emotions with high accuracy.
+
+---
+
+## 📌 Table of Contents
+
+* [Project Overview](#project-overview)
+* [Dataset](#dataset)
+* [Feature Extraction](#feature-extraction)
+* [Model Architecture](#model-architecture)
+* [Training](#training)
+* [Evaluation](#evaluation)
+* [Explainability](#explainability)
+* [Real-Time Demo](#real-time-demo)
+* [How to Run](#how-to-run)
+* [Emotion Labels](#emotion-labels)
+* [Applications](#applications)
+* [Author](#author)
+* [License](#license)
 
 ---
 
 ## 🔍 Project Overview
 
-* **Goal:** Accurately classify emotions from synchronized audio and video inputs
-* **Dataset:** RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)
-* **Modalities:**
-
-  * Audio (.wav) → MFCC features
-  * Video (.mp4) → ResNet18 features
+AVemotion classifies eight human emotions from synchronized `.wav` audio and `.mp4` video samples using a multimodal deep learning model. The combination of acoustic and visual features allows for robust emotion detection even in noisy or ambiguous settings.
 
 ---
 
-## 📁 Project Structure
+## 📦 Dataset
 
-```
-.
-├── app.py               # Streamlit interface
-├── best_model.pt        # Trained Transformer model
-├── data/                # RAVDESS audio-video files (unzipped)
-├── notebook.ipynb       # Main development notebook
-└── README.md            # Project overview
-```
+**RAVDESS** - Ryerson Audio-Visual Database of Emotional Speech and Song
+
+* 24 professional actors (12 male, 12 female)
+* 8 emotions: calm, happy, sad, angry, fearful, disgust, surprised, neutral
+* Audio and video clips of both speech and song
+
+---
+
+## 🎛 Feature Extraction
+
+### Audio:
+
+* Extract 40 MFCC (Mel Frequency Cepstral Coefficient) features per audio clip using `librosa`
+
+### Video:
+
+* Extract deep visual features using a pre-trained `ResNet18` from `torchvision`
+* Sample every 30th frame from the video
+* Aggregate frame features via mean pooling (512-D vector)
+
+### Final Feature Vector:
+
+* Concatenation of audio and video features: **552-dimensional**
 
 ---
 
 ## 🧠 Model Architecture
 
-**TransformerEmotionClassifier:**
+### `TransformerEmotionClassifier`
 
-* Input: 552 features (40 audio + 512 video)
-* Embedding layer + LayerNorm + Dropout
-* Transformer Encoder (2 layers, 4 heads)
-* Fully connected classifier
+* **Input:** 552 features
+* **Embedding Layer:** Linear + LayerNorm + ReLU + Dropout
+* **Transformer Encoder:**
+
+  * 2 layers
+  * 4 attention heads
+  * Feedforward size: 512
+* **Classifier Head:**
+
+  * Linear → ReLU → Dropout → Linear → 8-class output
+
+---
+
+## 🏋️‍♂️ Training
+
+* Optimizer: Adam (`lr=0.001`)
+* Loss: CrossEntropy with class balancing
+* Epochs: 50
+* Batch size: 32
+* Device: CUDA/CPU
+* Model checkpoint saved to `best_model.pt`
+
+---
+
+## 📊 Evaluation
+
+* Classification Report: Accuracy, Precision, Recall, F1-score
+* Label-wise performance tracking
+* Optional Confusion Matrix
+
+---
+
+## 🔎 Explainability
+
+* SHAP (`GradientExplainer`) used to highlight feature importance
+* Shows impact of both audio and video features on prediction
+* SHAP Summary and Force plots supported
+
+---
+
+## 🖥 Real-Time Demo
+
+* Built with **Streamlit**
+* Upload `.wav` and `.mp4` files
+* Extract features in real-time
+* Predict and display detected emotion
+* Optional: deploy with Streamlit Cloud or Colab + LocalTunnel
 
 ---
 
 ## 🚀 How to Run
 
-### 1. Install Dependencies
+### 🧱 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Train the Model (Optional)
+### 🧠 Train the Model (Optional)
 
 ```python
-# inside notebook.ipynb
-# runs 50 epochs and saves best_model.pt
+# Run notebook.ipynb or training script
 ```
 
-### 3. Launch the Streamlit App
+### ▶️ Launch Streamlit App
 
 ```bash
 streamlit run app.py
@@ -77,18 +147,9 @@ streamlit run app.py
 
 ---
 
-## 🔬 Explainability
-
-Model insights are generated using SHAP GradientExplainer, visualizing feature importance from both audio and video domains.
-
----
-
 ## 💡 Applications
 
-* Accessibility tools (emotion feedback for hearing/speech impaired)
-* Virtual assistants and robotics
-* Interactive learning and therapy platforms
-
-## 📄 License
-
-This project is for educational and research use. For other use cases, please contact the author.
+* Emotion-aware accessibility tools
+* Sentiment analysis in therapy and education
+* Human-robot interaction
+* AI-driven customer service
