@@ -1,0 +1,11 @@
+streamlit
+torch
+torchvision
+librosa
+ffmpeg-python
+opencv-python-headless
+numpy
+scikit-learn
+matplotlib
+pandas
+shap
