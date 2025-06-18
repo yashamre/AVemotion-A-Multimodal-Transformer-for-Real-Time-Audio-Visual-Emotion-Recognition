@@ -1,5 +1,6 @@
 streamlit
 torch
+torchaudio
 torchvision
 librosa
 ffmpeg-python
@@ -9,3 +10,4 @@ scikit-learn
 matplotlib
 pandas
 shap
+
