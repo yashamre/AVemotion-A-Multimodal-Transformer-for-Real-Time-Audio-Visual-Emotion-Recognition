@@ -99,11 +99,13 @@ This shows a steady decrease in loss, indicating the model is learning effective
 ### 📈 Accuracy per Emotion Class
 
 ![Accuracy per Class](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Bar%20Plot.png)
+
 Helps identify which emotions are learned well (e.g. 'fearful', 'disgust') and which need more data or refinement (e.g. 'sad', 'neutral').
 
 ### 🧩 Confusion Matrix
 
 ![Confusion Matrix](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Confusion%20Matrix.png)
+
 Shows where the model confuses similar emotions, especially between 'happy', 'neutral', and 'sad'.
 
 ---
@@ -116,6 +118,7 @@ Shows where the model confuses similar emotions, especially between 'happy', 'ne
 ### 🧠 SHAP Summary Plot
 
 ![SHAP Summary](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/SHAP%20Summary%20Plot.png)
+
 Ranks feature impact on model predictions, helping understand what the model relies on most.
 
 ---
@@ -125,6 +128,7 @@ Ranks feature impact on model predictions, helping understand what the model rel
 ### 🌐 t-SNE Projection
 
 ![t-SNE Plot](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/t-SNE%20Plot.png)
+
 Visualizes clustering of learned audio-video features. Clear separability = strong feature encoding.
 
 ---
