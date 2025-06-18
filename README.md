@@ -84,7 +84,7 @@ AVemotion classifies eight human emotions from synchronized `.wav` audio and `.m
 
 ### 📉 Training Loss Plot
 
-![Training Loss](Line%20graph.png)
+![Training Loss]([Line%20graph.png](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Line%20graph.png))
 This shows a steady decrease in loss, indicating the model is learning effectively across epochs.
 
 ---
@@ -97,12 +97,12 @@ This shows a steady decrease in loss, indicating the model is learning effective
 
 ### 📈 Accuracy per Emotion Class
 
-![Accuracy per Class](Bar%20Plot.png)
+![Accuracy per Class]([Bar%20Plot.png](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Bar%20Plot.png))
 Helps identify which emotions are learned well (e.g. 'fearful', 'disgust') and which need more data or refinement (e.g. 'sad', 'neutral').
 
 ### 🧩 Confusion Matrix
 
-![Confusion Matrix](Confusion%20Matrix.png)
+![Confusion Matrix]([Confusion%20Matrix.png](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Confusion%20Matrix.png))
 Shows where the model confuses similar emotions, especially between 'happy', 'neutral', and 'sad'.
 
 ---
@@ -114,7 +114,7 @@ Shows where the model confuses similar emotions, especially between 'happy', 'ne
 
 ### 🧠 SHAP Summary Plot
 
-![SHAP Summary](SHAP%20Summary%20Plot.png)
+![SHAP Summary]([SHAP%20Summary%20Plot.png](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/SHAP%20Summary%20Plot.png))
 Ranks feature impact on model predictions, helping understand what the model relies on most.
 
 ---
@@ -123,7 +123,7 @@ Ranks feature impact on model predictions, helping understand what the model rel
 
 ### 🌐 t-SNE Projection
 
-![t-SNE Plot](t-SNE%20Plot.png)
+![t-SNE Plot]([t-SNE%20Plot.png](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/t-SNE%20Plot.png))
 Visualizes clustering of learned audio-video features. Clear separability = strong feature encoding.
 
 ---
@@ -182,15 +182,3 @@ streamlit run app.py
 * Human-robot interaction
 * AI-driven customer service
 
----
-
-## 🧑‍💻 Author
-
-**Developed by:** \[Your Name]
-For submission to the **Apple AIML Internship** program.
-
----
-
-## 📄 License
-
-This project is licensed for research and educational use only. For commercial or extended usage, contact the author.
