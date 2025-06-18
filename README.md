@@ -84,7 +84,7 @@ AVemotion classifies eight human emotions from synchronized `.wav` audio and `.m
 
 ### 📉 Training Loss Plot
 
-![Training Loss]([Line%20graph.png](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Line%20graph.png))
+![Training Loss](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/f36dfb4b77e7da2594f129768c249340ce09f7b7/Line%20graph.png)
 This shows a steady decrease in loss, indicating the model is learning effectively across epochs.
 
 ---
