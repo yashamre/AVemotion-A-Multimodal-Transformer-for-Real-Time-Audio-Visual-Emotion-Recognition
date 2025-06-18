@@ -82,13 +82,28 @@ AVemotion classifies eight human emotions from synchronized `.wav` audio and `.m
 * Device: CUDA/CPU
 * Model checkpoint saved to `best_model.pt`
 
+### 📉 Training Loss Plot
+
+![Training Loss](Line%20graph.png)
+This shows a steady decrease in loss, indicating the model is learning effectively across epochs.
+
 ---
 
 ## 📊 Evaluation
 
 * Classification Report: Accuracy, Precision, Recall, F1-score
 * Label-wise performance tracking
-* Optional Confusion Matrix
+* Confusion Matrix for visual error analysis
+
+### 📈 Accuracy per Emotion Class
+
+![Accuracy per Class](Bar%20Plot.png)
+Helps identify which emotions are learned well (e.g. 'fearful', 'disgust') and which need more data or refinement (e.g. 'sad', 'neutral').
+
+### 🧩 Confusion Matrix
+
+![Confusion Matrix](Confusion%20Matrix.png)
+Shows where the model confuses similar emotions, especially between 'happy', 'neutral', and 'sad'.
 
 ---
 
@@ -96,7 +111,20 @@ AVemotion classifies eight human emotions from synchronized `.wav` audio and `.m
 
 * SHAP (`GradientExplainer`) used to highlight feature importance
 * Shows impact of both audio and video features on prediction
-* SHAP Summary and Force plots supported
+
+### 🧠 SHAP Summary Plot
+
+![SHAP Summary](SHAP%20Summary%20Plot.png)
+Ranks feature impact on model predictions, helping understand what the model relies on most.
+
+---
+
+## 📌 Visual Embedding Analysis
+
+### 🌐 t-SNE Projection
+
+![t-SNE Plot](t-SNE%20Plot.png)
+Visualizes clustering of learned audio-video features. Clear separability = strong feature encoding.
 
 ---
 
@@ -153,3 +181,16 @@ streamlit run app.py
 * Sentiment analysis in therapy and education
 * Human-robot interaction
 * AI-driven customer service
+
+---
+
+## 🧑‍💻 Author
+
+**Developed by:** \[Your Name]
+For submission to the **Apple AIML Internship** program.
+
+---
+
+## 📄 License
+
+This project is licensed for research and educational use only. For commercial or extended usage, contact the author.
