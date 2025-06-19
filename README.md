@@ -141,6 +141,10 @@ Visualizes clustering of learned audio-video features. Clear separability = stro
 * Predict and display detected emotion
 * Optional: deploy with Streamlit Cloud or Colab + LocalTunnel
 
+### ✅ Live App:
+
+[https://avemotion.streamlit.app](https://avemotion.streamlit.app)
+
 ---
 
 ## 🚀 How to Run
@@ -162,6 +166,22 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+
+---
+
+## 🖼 Screenshots
+
+### 🔻 App UI
+
+![UI](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/d27b2c29679896f3edd8112c1408355dcad12b18/UI.png)
+
+### 🎯 Sample Prediction (Disgust)
+
+![Result](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/d27b2c29679896f3edd8112c1408355dcad12b18/Disgust.png)
+
+### 🎯 Sample Prediction (Surprised)
+
+![Result](https://github.com/yashamre/AVemotion-A-Multimodal-Transformer-for-Real-Time-Audio-Visual-Emotion-Recognition/blob/d27b2c29679896f3edd8112c1408355dcad12b18/Surprised.png)
 
 ---
 
